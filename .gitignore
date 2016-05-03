@@ -19,3 +19,5 @@ test
 docker-image.json
 docker-build.json
 horatio.json
+*.gems
+*.bin
