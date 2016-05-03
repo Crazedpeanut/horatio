@@ -1,0 +1,10 @@
+#!/bin/bash
+
+read -r -d '' json <<EOF
+{
+  "name": "docker-project",
+  "version": "0.0.1"
+}
+EOF
+
+echo "$json"
