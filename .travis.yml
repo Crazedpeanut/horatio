@@ -19,4 +19,4 @@ matrix:
   fast_finish: true
 
 notifications:
-  email: false
+  email: pauly@buzbox.net
