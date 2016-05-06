@@ -21,3 +21,4 @@ docker-build.json
 horatio.json
 *.gems
 *.bin
+*.swp

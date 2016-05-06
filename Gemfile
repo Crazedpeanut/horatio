@@ -6,4 +6,5 @@ gemspec
 group :guard do
   gem 'guard'
   gem 'guard-minitest'
+  gem 'guard-rubocop'
 end
