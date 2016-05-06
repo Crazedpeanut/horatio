@@ -12,7 +12,7 @@ before_install:
 
 bundler_args: --without guard
 
-script: bundle exec rake test
+script: bundle exec rake
 
 matrix:
   allow_failures:
