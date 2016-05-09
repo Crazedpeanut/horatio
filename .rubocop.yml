@@ -1,0 +1,169 @@
+Lint/DeprecatedClassMethods:
+  Exclude:
+    - 'lib/horatio/detector/io_handler.rb'
+
+Lint/RescueException:
+  Exclude:
+    - 'bin/horatio'
+
+Lint/UselessAssignment:
+  Exclude:
+    - 'lib/horatio.rb'
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/LineLength:
+  Max: 201
+
+Metrics/MethodLength:
+  Max: 11
+
+Performance/RedundantMatch:
+  Exclude:
+    - 'lib/horatio/detector/validator.rb'
+
+Style/BracesAroundHashParameters:
+  Exclude:
+    - 'lib/horatio/releaser.rb'
+    - 'spec/horatio/releaser_spec.rb'
+    - 'spec/horatio/vcs/git_spec.rb'
+
+Style/CommentAnnotation:
+  Exclude:
+    - 'spec/horatio/releaser_spec.rb'
+    - 'spec/horatio/vcs/git_spec.rb'
+
+Style/CommentIndentation:
+  Exclude:
+    - 'spec/horatio/detector/rubygem_spec.rb'
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'lib/horatio/detector.rb'
+    - 'lib/horatio/detector/docker.rb'
+    - 'lib/horatio/detector/dynamic.rb'
+    - 'lib/horatio/detector/io_handler.rb'
+    - 'lib/horatio/detector/json_reader.rb'
+    - 'lib/horatio/detector/json_writer.rb'
+    - 'lib/horatio/detector/maven.rb'
+    - 'lib/horatio/detector/node_package.rb'
+    - 'lib/horatio/detector/null_writer.rb'
+    - 'lib/horatio/detector/rubygem.rb'
+    - 'lib/horatio/detector/validator.rb'
+    - 'lib/horatio/releaser.rb'
+    - 'lib/horatio/vcs.rb'
+    - 'lib/horatio/vcs/git.rb'
+    - 'lib/horatio/vcs/subversion.rb'
+
+Style/EmptyLinesAroundBlockBody:
+  Exclude:
+    - 'spec/horatio/vcs/git_spec.rb'
+    - 'spec/horatio/vcs/subversion_spec.rb'
+
+Style/EmptyLinesAroundClassBody:
+  Exclude:
+    - 'lib/horatio/releaser.rb'
+    - 'lib/horatio/vcs/git.rb'
+    - 'lib/horatio/vcs/subversion.rb'
+
+Style/EmptyLinesAroundModuleBody:
+  Exclude:
+    - 'lib/horatio/helper/vcs.rb'
+
+Style/ExtraSpacing:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Style/IndentArray:
+  EnforcedStyle: consistent
+
+Style/IndentationWidth:
+  Exclude:
+    - 'Rakefile'
+    - 'lib/horatio/vcs.rb'
+    - 'lib/horatio/vcs/git.rb'
+
+Style/LeadingCommentSpace:
+  Exclude:
+    - 'spec/horatio/detector/docker_spec.rb'
+    - 'spec/horatio/releaser_spec.rb'
+    - 'spec/horatio/vcs/git_spec.rb'
+
+Style/MutableConstant:
+  Exclude:
+    - 'lib/horatio.rb'
+    - 'lib/horatio/version.rb'
+
+Style/ParallelAssignment:
+  Exclude:
+    - 'lib/horatio.rb'
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'horatio.gemspec'
+    - 'spec/fixtures/test.gemspec'
+
+Style/RedundantReturn:
+  Exclude:
+    - 'lib/horatio/releaser.rb'
+
+Style/RegexpLiteral:
+  Exclude:
+    - 'Guardfile'
+
+Style/GuardClause:
+  Exclude:
+    - 'lib/horatio.rb'
+
+Style/Semicolon:
+  Exclude:
+    - 'lib/horatio.rb'
+
+Style/SpaceAfterComma:
+  Exclude:
+    - 'bin/horatio'
+
+Style/SpaceAfterMethodName:
+  Exclude:
+    - 'lib/horatio.rb'
+
+Style/SpaceAroundBlockParameters:
+  Exclude:
+    - 'lib/horatio/releaser.rb'
+
+Style/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+Style/SpaceAroundOperators:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Style/SpaceInsideBlockBraces:
+  Enabled: false
+
+Style/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Style/SpaceInsideStringInterpolation:
+  Exclude:
+    - 'lib/horatio/releaser.rb'
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/SymbolProc:
+  Exclude:
+    - 'lib/horatio/detector.rb'
+    - 'lib/horatio/vcs.rb'
+
+Style/UnlessElse:
+  Exclude:
+    - 'lib/horatio.rb'
+
+Style/UnneededPercentQ:
+  Exclude:
+    - 'horatio.gemspec'
+    - 'spec/fixtures/test.gemspec'

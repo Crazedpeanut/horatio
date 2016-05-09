@@ -1,11 +1,8 @@
 require 'bundler/gem_tasks'
 require 'rake/testtask'
-require 'minitest/reporters'
+require 'rubocop/rake_task'
 
-Minitest::Reporters.use!([
-  Minitest::Reporters::DefaultReporter.new,
-  Minitest::Reporters::JUnitReporter.new
-])
+RuboCop::RakeTask.new
 
 Rake::TestTask.new(:test) do |t|
     t.libs << 'lib'
@@ -13,4 +10,4 @@ Rake::TestTask.new(:test) do |t|
     t.pattern = 'spec/**/*_spec.rb'
 end
 
-task default: 'test'
+task default: [:test, :rubocop]
