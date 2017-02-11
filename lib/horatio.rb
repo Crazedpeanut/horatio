@@ -49,7 +49,7 @@ def run_sh(cmd)
     color { Log.info "executing command: #{cmd}" }
     o, e, s = sh(cmd)
 
-    if s.exitstatus == 0
+    if s.exitstatus.zero?
       color { Log.info "succesfully executed command `#{cmd}` output:\n #{o}" }
     else
       raise "execution of `#{cmd}` failed output from STDERR was:\n #{e}\n STDOUT was:\n #{o}"

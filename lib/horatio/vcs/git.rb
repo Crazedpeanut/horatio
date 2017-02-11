@@ -8,7 +8,7 @@ module Horatio
       include Horatio::Helper::VCS
 
       def self.detect
-        sh('git rev-parse HEAD').last.exitstatus == 0
+        sh('git rev-parse HEAD').last.exitstatus.zero?
       end
 
       def latest_revision
@@ -20,7 +20,7 @@ module Horatio
           sh "git remote rm horatio &> /dev/null"
           run_sh "git remote add horatio #{remote_url}"
           run_sh "git commit -m 'image release' #{file}"
-	  run_sh "git push horatio `git branch | grep \* | cut -d ' ' -f2`"
+          run_sh "git push horatio `git branch | grep \* | cut -d ' ' -f2`"
       end
 
       def remote_url
