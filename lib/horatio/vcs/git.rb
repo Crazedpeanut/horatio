@@ -20,7 +20,7 @@ module Horatio
           sh "git remote rm horatio &> /dev/null"
           run_sh "git remote add horatio #{remote_url}"
           run_sh "git commit -m 'image release' #{file}"
-          run_sh "git push horatio master"
+	  run_sh "git push horatio `git branch | grep \* | cut -d ' ' -f2`"
       end
 
       def remote_url
