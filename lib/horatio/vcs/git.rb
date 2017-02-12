@@ -14,7 +14,7 @@ module Horatio
       def latest_revision
         sh('git rev-parse --short HEAD').first.strip
       end
-      
+   
       def current_branch
         sh('git rev-parse --abbrev-ref HEAD').strip
       end
