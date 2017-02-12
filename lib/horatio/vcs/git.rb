@@ -8,11 +8,15 @@ module Horatio
       include Horatio::Helper::VCS
 
       def self.detect
-        sh('git rev-parse HEAD').last.exitstatus == 0
+        sh('git rev-parse HEAD').last.exitstatus.zero?
       end
 
       def latest_revision
         sh('git rev-parse --short HEAD').first.strip
+      end
+   
+      def current_branch
+        sh('git rev-parse --abbrev-ref HEAD').strip
       end
 
       def commit(file)
@@ -20,7 +24,7 @@ module Horatio
           sh "git remote rm horatio &> /dev/null"
           run_sh "git remote add horatio #{remote_url}"
           run_sh "git commit -m 'image release' #{file}"
-          run_sh "git push horatio master"
+          run_sh "git push horatio #{current_branch}"
       end
 
       def remote_url
