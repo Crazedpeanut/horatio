@@ -9,6 +9,7 @@ module Horatio
       @options = options
       @registry = @options['registry']
       @release = Horatio::Detector.detect
+      @docker_args = @options['dockerArgs']
       color { Log.info "detected #{@release.description}" }
       @vcs = Horatio::VCS.detect(@options)
     end
@@ -32,7 +33,7 @@ module Horatio
 
       no_cache = ENV['DOCKER_BUILD_NO_CACHE'] ? "--no-cache " : ""
 
-      run_sh "docker build " + no_cache + "-t #{@registry}/#{@release.name}:#{@release.version}-#{@vcs.latest_revision} ."
+      run_sh "docker build " + no_cache + "-t #{@registry}/#{@release.name}:#{@release.version}-#{@vcs.latest_revision} #{@dockerArgs} ."
       run_sh "docker push #{@registry}/#{@release.name}"
 
       generate_artifact

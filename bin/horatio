@@ -18,6 +18,10 @@ Usage: horatio [options]"
     options['registry'] = g
   end
 
+  opts.on("-d", "--docker-args [DOCKER ARGS]",String, "Arguments to be passed to docker") do |g|
+    options['dockerArgs'] = g
+  end
+
   opts.on_tail("-h", "--help", "Show this message") do
     puts opts
     exit
